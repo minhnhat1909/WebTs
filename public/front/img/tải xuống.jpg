@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Đăng ký KH cá nhân</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- Font Awesome CSS v6.2.1  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <!-- font roboto google css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://foliotek.github.io/Croppie/croppie.css">
+  <!-- 2020 Animate.css Version - 4.1.1 -->
+  <link rel="stylesheet" href="../css/animate.min.css">
+  <!-- css cropperJS -->
+  <link href="../js/cropperjs/cropper.min.css" rel="stylesheet">
+  <!-- custom css -->
+  <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+    <header class="header">
+    <nav class="navbar">
+      <div class="container d-flex justify-content-between align-baseline">
+        <div class="navbar_page_toggle d-none">
+          <button class="bg-transparent border-0" id="toggle_page"><img src="../images/toggle_page.png" alt="toggle_page" width="25"></button>
+        </div>
+        <div class="logo_header">
+          <a href="https://mcards.vn"><img src="../images/logo_header_white.png" alt="logo_header" width="150"></a>
+        </div>
+        <a href="https://mcards.vn/register/" class="text-decoration-none text-white nav-link-large pt-1">Khách Hàng Cá
+          Nhân</a>
+        <a href="https://mcards.vn/business/" class="text-decoration-none text-white nav-link-large pt-1">Khách Hàng
+          Doanh Nghiệp</a>
+        <a href="https://mcards.vn/guide/" class="text-decoration-none text-white nav-link-large pt-1">Hướng Dẫn</a>
+        <a href="https://mcards.vn/#ho_tro" class="text-decoration-none text-white nav-link-large pt-1">Liên Hệ</a>
+        <a href="#" class="text-decoration-none text-white nav-link-large pt-2 fs-5"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <div class="navbar_customer_toggle">
+          <button class="bg-transparent border-0" id="toggle_customer"><img src="../images/toggle_customer.png" alt="toggle_customer" width="25"></button>
+        </div>
+      </div>
+    </nav>
+    <div class="navbar_body container d-flex justify-content-between">
+      <div class="navbar_page_body w-100 d-none" id="toggle_page">
+        <a class="nav-link text-blue-light-homepage py-3 fw-bold border-bottom border-blue-light-homepage border-1" href="https://mcards.vn/register/">Khách Hàng Cá Nhân</a>
+        <a class="nav-link text-blue-light-homepage py-3 fw-bold border-bottom border-blue-light-homepage border-1" href="https://mcards.vn/business/">Khách Hàng Doanh Nghiệp</a>
+        <a class="nav-link text-blue-light-homepage py-3 fw-bold border-bottom border-blue-light-homepage border-1" href="https://mcards.vn/guide/">Hướng Dẫn</a>
+        <a class="nav-link text-blue-light-homepage py-3 fw-bold border-blue-light-homepage" href="https://mcards.vn/#ho_tro">Liên Hệ</a>
+      </div>
+      <div class="navbar_customer_body w-100 d-none" id="toggle_customer">
+        <a class="nav-link text-blue-light-homepage py-3 fw-bold text-end" href="https://mcards.vn/login.php">Đăng
+          nhập</a>
+      </div>
+    </div>
+  </header>  <main class="pb-5">
+    <div class="container">
+      <form class=" d-flex mx-auto flex-column align-items-center justify-content-center px-3" method="post" action="">
+        <h4 class="text-center text-blue-homepage mt-3 fw-bold" style="line-height: 2;">
+          Đăng ký <img src="../images/logo_KHCN.png" alt="logo_no_slogan" width="150" class="pb-2"> của bạn
+        </h4>
+        <span class="text-center text-black-50 fw-bold fs-5 my-3">Thêm ảnh đại diện</span>
+        <div class="avatar_KHCN text-center">
+          <h5><img src="../images/avatar_KHCN.png" alt="avatar_KHCN" id="item-img-output" width="150" style="border-radius: 50%;"></h5>
+          <input type="hidden" name="hinhprofile" id="hinhprofile" value="">
+          <label style="position: relative;top: -50px;right: -50px;cursor: pointer;">
+            <input type="file" class="btn-camera item-img" name="file_photo" width="50" style="display:none;" id="imageFile">
+            <img src="../images/camera_icon.png" alt="camera_icon" width="50">
+          </label>
+        </div>
+        <div class="input-group mb-4 col-8 col-md-6 text-blue-dark-homepage">
+          <label class="pt-3"><img src="../images/user_icon.png" alt="enter_icon" width="25"></label>
+          <label for="userPerson" class="pb-4 ps-5 fw-bold">Họ & Tên</label>
+          <input type="text" class="form-control mt-4 ps-5" name="tenkh" id="userPerson" style="color:#00579c">
+        </div>
+        <div class="input-group mb-4 col-8 col-md-6 text-blue-dark-homepage">
+          <label class="pt-3"><img src="../images/phone_icon.png" alt="enter_icon" width="25"></label>
+          <label for="mobilePerson" class="pb-4 ps-5 fw-bold">Số di động</label>
+          <input type="text" class="form-control mt-4 ps-5" name="mobile" id="mobilePerson" style="color:#00579c">
+        </div>
+        <div class="input-group mb-4 col-8 col-md-6 text-blue-dark-homepage">
+          <label class="pt-3"><img src="../images/phone_icon.png" alt="enter_icon" width="25"></label>
+          <label for="phonePerson" class="pb-4 ps-5 fw-bold">SĐT Cơ quan</label>
+          <input type="text" class="form-control mt-4 ps-5" name="phone" id="phonePerson" style="color:#00579c">
+        </div>
+        <div class="input-group mb-4 col-8 col-md-6 text-blue-dark-homepage">
+          <label class="pt-3"><img src="../images/location_icon.png" alt="enter_icon" width="25"></label>
+          <label for="addressPerson" class="pb-4 ps-5 fw-bold">Địa chỉ</label>
+          <input type="text" class="form-control mt-4 ps-5" name="address" id="addressPerson" style="color:#00579c">
+        </div>
+        <div class="input-group mb-4 col-8 col-md-6 text-blue-dark-homepage">
+          <label class="pt-3"><img src="../images/company_icon.png" alt="enter_icon" width="25"></label>
+          <label for="companyPerson" class="pb-4 ps-5 fw-bold">Công ty</label>
+          <input type="text" class="form-control mt-4 ps-5" name="company" id="companyPerson" style="color:#00579c">
+        </div>
+        <div class="input-group mb-4 col-8 col-md-6 text-blue-dark-homepage">
+          <label class="pt-3"><img src="../images/department_icon.png" alt="enter_icon" width="25"></label>
+          <label for="departmentPerson" class="pb-4 ps-5 fw-bold">Phòng ban</label>
+          <input type="text" class="form-control mt-4 ps-5" name="department" id="departmentPerson" style="color:#00579c">
+        </div>
+        <div class="input-group mb-4 col-8 col-md-6 text-blue-dark-homepage">
+          <label class="pt-3"><img src="../images/career_icon.png" alt="enter_icon" width="25"></label>
+          <label for="careerPerson" class="pb-4 ps-5 fw-bold">Chức vụ</label>
+          <input type="text" class="form-control mt-4 ps-5" name="position" id="careerPerson" style="color:#00579c">
+        </div>
+        <div class="input-group mb-4 col-8 col-md-6 text-blue-dark-homepage">
+          <label class="pt-3"><img src="../images/email_icon.png" alt="enter_icon" width="25"></label>
+          <label for="emailPerson" class="pb-4 ps-5 fw-bold">Email</label>
+          <input type="text" class="form-control mt-4 ps-5" name="email" id="emailPerson" style="color:#00579c">
+        </div>
+        <div class="input-group mb-4 col-8 col-md-6 text-blue-dark-homepage">
+          <label class="pt-3"><img src="../images/website_icon.png" alt="enter_icon" width="25"></label>
+          <label for="webSitePerson" class="pb-4 ps-5 fw-bold">Website</label>
+          <input type="text" class="form-control mt-4 ps-5" name="website1" id="webSitePerson" style="color:#00579c">
+        </div>
+        <div class="tabPaneBody">
+          <div class="imageCheckbox d-flex tab-pane row mx-auto justify-content-evenly my-4" id="premier">
+            <div class="form-check col-xs-8 col-md-3 pt-2 my-3">
+              <input class="form-check-input" type="checkbox" value="" id="premier1">
+              <label class="form-check-label" for="premier1">
+                <img src="../images/premier_1.png" alt="premier_1" class="w-100">
+                <button class="btn bg-transparent ZoomCategory float-end" data-bs-toggle="modal" data-bs-target="#zoomCategoryModal"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+              </label>
+            </div>
+            <div class="form-check col-xs-8 col-md-3 pt-2 my-3">
+              <input class="form-check-input" type="checkbox" value="" id="premier2">
+              <label class="form-check-label" for="premier2">
+                <img src="../images/premier_2.png" alt="premier_2" class="w-100">
+                <button class="btn bg-transparent ZoomCategory float-end" data-bs-toggle="modal" data-bs-target="#zoomCategoryModal"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+              </label>
+            </div>
+          </div>
+          <div class="imageCheckbox d-flex tab-pane row mx-auto justify-content-evenly my-4 d-none" id="standard">
+            <div class="form-check col-xs-8 col-md-3 pt-2 my-3">
+              <input class="form-check-input" type="checkbox" value="" id="standard1">
+              <label class="form-check-label" for="standard1">
+                <img src="../images/standard_1.png" alt="standard_1" class="w-100">
+                <button class="btn bg-transparent ZoomCategory float-end" data-bs-toggle="modal" data-bs-target="#zoomCategoryModal"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+              </label>
+            </div>
+            <div class="form-check col-xs-8 col-md-3 pt-2 my-3">
+              <input class="form-check-input" type="checkbox" value="" id="standard2">
+              <label class="form-check-label" for="standard2">
+                <img src="../images/standard_2.png" alt="standard_2" class="w-100">
+                <button class="btn bg-transparent ZoomCategory float-end" data-bs-toggle="modal" data-bs-target="#zoomCategoryModal"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+              </label>
+            </div>
+            <!-- <div class="form-check col-xs-8 col-md-3 pt-2 my-3">
+              <input class="form-check-input" type="checkbox" value="" id="standard3">
+              <label class="form-check-label" for="standard3">
+                <img src="../images/imgCheckbox_2.png" alt="imgCheckbox_3" class="w-100">
+              </label>
+            </div> -->
+          </div>
+          <div class="imageCheckbox d-flex tab-pane row mx-auto justify-content-evenly my-4 d-none" id="signature">
+            <div class="form-check col-xs-8 col-md-3 pt-2 my-3">
+              <input class="form-check-input" type="checkbox" value="" id="signature1">
+              <label class="form-check-label" for="signature1">
+                <img src="../images/signature_1.png" alt="signature_1" class="w-100">
+                <button class="btn bg-transparent ZoomCategory float-end" data-bs-toggle="modal" data-bs-target="#zoomCategoryModal"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+              </label>
+            </div>
+            <div class="form-check col-xs-8 col-md-3 pt-2 my-3">
+              <input class="form-check-input" type="checkbox" value="" id="signature2">
+              <label class="form-check-label" for="signature2">
+                <img src="../images/signature_2.png" alt="signature_2" class="w-100">
+                <button class="btn bg-transparent ZoomCategory float-end" data-bs-toggle="modal" data-bs-target="#zoomCategoryModal"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+              </label>
+            </div>
+            <div class="form-check col-xs-8 col-md-3 pt-2 my-3">
+              <input class="form-check-input" type="checkbox" value="" id="signature3">
+              <label class="form-check-label" for="signature3">
+                <img src="../images/signature_3.png" alt="signature_3" class="w-100">
+                <button class="btn bg-transparent ZoomCategory float-end" data-bs-toggle="modal" data-bs-target="#zoomCategoryModal"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mb-5" id="title_tab">
+          <a href="#premier" class="item_click mx-3 text-decoration-none fw-bold text-blue-light-homepage">Premier</button>
+            <a href="#standard" class="item_click mx-3 text-decoration-none text-dark fw-bold">Standard</button>
+              <a href="#signature" class="item_click mx-3 text-decoration-none text-dark fw-bold">Signature</button>
+        </div>
+        <div class="d-flex justify-content-between align-items-center w-100 border rounded-3">
+          <span class="ps-2">Thông tin nhận mCards</span>
+          <a class="btn bg-transparent dropdownAddress"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+        <div class="dropdowndropdownAddress_body w-100 mb-5 p-5">
+          <div class="input-group mb-4 col-8 col-md-6 text-blue-dark-homepage">
+            <label class="pt-3"><img src="../images/user_icon.png" alt="enter_icon" width="25"></label>
+            <label for="userPerson" class="pb-4 ps-5 fw-bold">Họ & Tên</label>
+            <input type="text" class="form-control mt-4 ps-5" name="nguoi_nhanthe" id="userPerson" style="color:#00579c">
+          </div>
+          <div class="input-group mb-4 col-8 col-md-6 text-blue-dark-homepage">
+            <label class="pt-3"><img src="../images/phone_icon.png" alt="enter_icon" width="25"></label>
+            <label for="phonePerson" class="pb-4 ps-5 fw-bold">Số điện thoại</label>
+            <input type="text" class="form-control mt-4 ps-5" nam="dienthoai_nhanthe" id="phonePerson" style="color:#00579c">
+          </div>
+          <div class="input-group mb-4 col-8 col-md-6 text-blue-dark-homepage">
+            <label class="pt-3"><img src="../images/location_icon.png" alt="enter_icon" width="25"></label>
+            <label for="addressPerson" class="pb-4 ps-5 fw-bold">Địa chỉ</label>
+            <input type="text" class="form-control mt-4 ps-5" name="diachi_nhanthe" id="addressPerson" style="color:#00579c">
+          </div>
+        </div>
+        <button class="btn bg-blue-homepage col-12 col-md-6 text-white fw-bold mt-4 py-3 register_btn" type="submit" name="sendmail">Gửi
+          đăng
+          ký</button>
+      </form>
+    </div>
+    <!-- <img src="" alt=""> -->
+  </main>
+  <!-- modal crop image -->
+  <style>
+    .cropper-crop-box {
+      overflow: hidden;
+    }
+  </style>
+  <div class="modal fade" id="modalCropAvatar" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div> -->
+        <div class="modal-body">
+          <div class="container">
+            <div class="img-container">
+              <img src="" alt="imageBeforeCrop" id="imageBeforeCrop" width="300">
+            </div>
+            <div class="d-flex justify-content-between my-2">
+              <span class="me-2 fs-2 text-secondary">-</span>
+              <input type="range" class="form-range px-2 my-3" min="-1" max="1" step="0.1" id="zoomValue">
+              <span class="ms-2 fs-2 text-secondary">+</span>
+            </div>
+            <div class="float-end mt-3">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="cropbtn" data-method="cropper.clear()">xác nhận</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end modal crop image -->
+  <!-- modal zoom category -->
+  <div class="modal p-3 fade" id="zoomCategoryModal" tabindex="-2">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+          <button type="button" class="btn-close mt-2 ms-2" data-bs-dismiss="modal" aria-label="Close"></button>
+          <img src="../images/signature_1.png" alt="zoomImg" class="imgZoomCategory w-100 mb-3">
+      </div>
+    </div>
+  </div>
+  <!-- end modal zoom category -->
+  <!-- Jquery v-3.6.3 CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script>
+    var widthPC = window.matchMedia("(min-width: 992px)");
+    if (widthPC.matches) {
+      $(".container-fluid").removeClass("container-fluid").addClass("container");
+    }
+    // breakPoint mobile
+    var widthMobile = window.matchMedia("(max-width: 576px)");
+    if (widthMobile.matches) {
+      $(".container-fluid").removeClass("container-fluid");
+      $(".navbar_page_toggle").removeClass("d-none");
+      $(".nav-link-large").addClass("d-none");
+    }
+    $(document).ready(function() {
+      $("#toggle_page, #toggle_customer").on("click", function() {
+        var idParam = $(this).attr("id");
+        $(this)
+          .parents(".header")
+          .find(`.navbar_body #${idParam}`)
+          .toggleClass("d-none");
+        if (idParam === "toggle_page") {
+          $(".navbar_body #toggle_customer").addClass("d-none");
+        } else $(".navbar_body #toggle_page").addClass("d-none");
+      });
+      $(".dropdownAddress").on("click", function() {
+        if ($(this).children().hasClass("fa-angle-up")) {
+          $(this).children().removeClass("fa-angle-up").addClass("fa-angle-down");
+        } else $(this).children().removeClass("fa-angle-down").addClass("fa-angle-up");
+        $(".dropdowndropdownAddress_body").slideToggle();
+      });
+    });
+  </script>
+  <!-- Nhu update ngày 21/02/2023  -->
+  <script>
+    //Checked checkbox like radio input
+    document.addEventListener('DOMContentLoaded', function() {
+      $('input[type="checkbox"]').click(function() {
+        var groupCheckBox = $(this).parents('.imageCheckbox').find('input[type="checkbox"]');
+        // console.log(groupCheckBox);
+        $(groupCheckBox).prop('checked', false);
+        $(this).prop('checked', true);
+      })
+    });
+    //tab-pane custom
+    $(document).ready(function() {
+      $(".item_click").on("click", function() {
+        var thisBtn = $(this).attr("href");
+        $(this)
+          .parents('#title_tab')
+          .find('.text-blue-light-homepage')
+          .addClass('text-dark')
+          .removeClass('text-blue-light-homepage');
+        $(this).addClass('text-blue-light-homepage').removeClass('text-dark');
+        $(this).parents(".container").find(`${thisBtn}`).removeClass("d-none");
+        $(this)
+          .parents(".container")
+          .find(".imageCheckbox")
+          .not(`${thisBtn}`)
+          .addClass("d-none");
+      });
+    })
+  </script>
+  <!-- Nhu update ngày 04/03/2023 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      $('.ZoomCategory').click(function(event) {
+        event.preventDefault();
+        var imgSrc = $(this).parents('.form-check-label').find('img')[0].src;
+        $('.imgZoomCategory')[0].src = imgSrc;
+      })
+    })
+  </script>
+  <!-- cropperJS CDN -->
+  <script src="../js/cropperjs/cropper.min.js"></script>
+  <!-- custom cropperJS here -->
+  <script src="../js/cropAvatar.js"></script>
+</body>
+
+</html>
